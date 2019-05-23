@@ -2,3 +2,25 @@ body {
     background-color: black;
     color: aliceblue;
 }
+
+.remove-button {
+    background-color: rgba(250, 245, 245, 0);
+    border: none; 
+    border-radius: 40px; 
+}
+.remove-button:hover {
+    background-color: rgba(0, 89, 255, 0.801);
+}
+.add-button {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(195, 197, 219);
+    font-size: 14px;
+    color: blue;
+}
+input {
+    border-radius: 7px;
+    background-color: rgba(201, 201, 230, 0.144);
+    color: white;
+}
