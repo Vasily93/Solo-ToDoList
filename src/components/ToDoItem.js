@@ -6,11 +6,11 @@ class ToDoItem extends Component {
         const todoItem = this.renderDOM();
         const onRemove = this.props.onRemove;
         const todo = this.props.todo;
-        // const removeButton = todoItem.querySelector('button');
+        const removeButton = todoItem.querySelector('button');
 
-        // removeButton.addEventListener('click', () =>{
-        //     onRemove(todo);
-        // });
+        removeButton.addEventListener('click', () => {
+            onRemove(todo);
+        });
 
         return todoItem;
     }
@@ -27,6 +27,7 @@ class ToDoItem extends Component {
             <li>
                 <input type="checkbox"${checked}>
                 <label class="task">${todo.task}</label>
+                <button class="remove-button">☕</button>
             </li>
         `;
     }

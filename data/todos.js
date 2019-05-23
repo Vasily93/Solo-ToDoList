@@ -1,7 +1,7 @@
 const todos = [
     {
         task: 'Learn JavaScript',
-        completed:true
+        completed:false
     },
     {
         task: 'Feed my Cats',
@@ -9,7 +9,7 @@ const todos = [
     },
     {
         task: 'Wash dishes',
-        completed:true
+        completed:false
     },
     {
         task: 'Takeout Trash',
@@ -17,11 +17,11 @@ const todos = [
     },
     {
         task: 'Learn Spanish',
-        completed:true
+        completed:false
     },
     {
         task: 'Make a cake',
-        completed:true
+        completed:false
     },
     {
         task: '100 push ups',
