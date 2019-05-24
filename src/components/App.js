@@ -3,6 +3,8 @@ import Header from './Header.js';
 import AddToDo from './AddToDo.js';
 import ToDoList from './ToDoList.js';
 import todos from '../../data/todos.js';
+import Filter from './Filter.js';
+import filterTodos from '../filter-todos.js';
 
 class App extends Component {
 
@@ -20,10 +22,19 @@ class App extends Component {
             onAdd: (newTodo) => {
                 todos.unshift(newTodo);
                 todoList.update({ todos });
+                filterTodos.update();
             }
         });
         const addTodoDOM = addTodo.render();
         main.appendChild(addTodoDOM);
+
+        const filter = new Filter({
+            onFilter: filter => {
+                const filtered = filterTodos(todos, filter);
+                todoList.update({ todos: filtered });
+            }
+        });
+        main.appendChild(filter.render());
 
         const todoList = new ToDoList({ 
             todos,
